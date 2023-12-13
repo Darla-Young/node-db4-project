@@ -1,6 +1,10 @@
 const express = require('express')
 const Recipes = require('./recipe-model')
-
+const {
+  checkRecipe, //eslint-disable-line
+  checkStep, //eslint-disable-line
+  checkIngredient, //eslint-disable-line
+} = require('./recipe-middleware') 
 const router = express.Router()
 
 router.get('/:id', (req, res, next) => {
